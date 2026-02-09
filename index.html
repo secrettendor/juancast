@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Ready-to-Deploy Site</title>
+
+    <style>
+        /* ===== Your CSS Start ===== */
+        @font-face {
+            font-family: montserrat_bold;
+            src: url("fonts/montserrat_bold.ttf");
+        }
+        @font-face {
+            font-family: montserrat_regular;
+            src: url("fonts/montserrat_regular.ttf");
+        }
+        @font-face {
+            font-family: montserrat_thin;
+            src: url("fonts/montserrat_thin.ttf");
+        }
+
+        :root {
+            --primary-light: #3B84F1;
+            --primary: #5271ff;
+            --primary-dark: #004aad;
+            --danger: #ff385a;
+            --text-color-dark: #000000B3;
+            --warning: #ffc107;
+            --success: #34cc36;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: montserrat_regular;
+            z-index: 1;
+        }
+
+        body {
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        h1,h3,h4,h5 {
+            color: var(--text-color-dark);
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        a:hover, button:hover, input[type="checkbox"]:hover, input[type="radio"]:hover {
+            cursor: pointer;
+        }
+
+        .hidden { display: none !important; }
+
+        /* Spinner Example */
+        .loader {
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #3498db;
+            border-radius: 50%;
+            width: 2vh;
+            height: 2vh;
+            animation: spin .5s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        #progress_spinner_container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 99999;
+            background-color: rgba(0, 0, 0, 0.362);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #progress_spinner_background {
+            width: 100px;
+            height: 100px;
+            background-color: var(--primary);
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-family: montserrat_bold;
+        }
+
+        /* ===== Your CSS End ===== */
+    </style>
+</head>
+<body>
+
+    <h1>Welcome to My Ready-to-Deploy Site!</h1>
+    <p>This is a one-file HTML version with your CSS and JS inline.</p>
+
+    <!-- Loading Spinner Example -->
+    <div id="progress_spinner_container">
+        <div id="progress_spinner_background">
+            <div class="loader"></div>
+            <h1>Loading...</h1>
+        </div>
+    </div>
+
+    <script>
+        /* ===== Your JS Start ===== */
+        // Paste your minified JS code here
+        console.log("Your analytics JS loaded!"); // Placeholder
+        /* ===== Your JS End ===== */
+    </script>
+
+</body>
+</html>
